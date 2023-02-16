@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="certificate_tag_1" model="certificates.tags">
+        <field name="certificates_tags">New</field>
+    </record>
+    <record id="certificate_tag_2" model="certificates.tags">
+        <field name="certificates_tags">Old</field>
+    </record>
+    <record id="certificate_tag_3" model="certificates.tags">
+        <field name="certificates_tags">Information</field>
+    </record>
+    <record id="certificate_tag_4" model="certificates.tags">
+        <field name="certificates_tags">Online</field>
+    </record>
+    <record id="certificate_tag_5" model="certificates.tags">
+        <field name="certificates_tags">Others</field>
+    </record>
+    <record id="licence_tag_1" model="licences.tags">
+        <field name="licence_tags">New</field>
+    </record>
+    <record id="licence_tag_2" model="licences.tags">
+        <field name="licence_tags">Old</field>
+    </record>
+    <record id="licence_tag_3" model="licences.tags">
+        <field name="licence_tags">Information</field>
+    </record>
+    <record id="licence_tag_4" model="licences.tags">
+        <field name="licence_tags">Online</field>
+    </record>
+    <record id="licence_tag_5" model="licences.tags">
+        <field name="licence_tags">Other</field>
+    </record>
+</odoo>

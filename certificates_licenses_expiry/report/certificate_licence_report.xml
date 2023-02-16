@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record id="action_certificate_report" model="ir.actions.report">
+            <field name="name">Certificate Report</field>
+            <field name="model">certificates</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">certificates_licenses_expiry.report_certificates</field>
+            <field name="report_file">certificates_licenses_expiry.report_certificates</field>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_licences_report" model="ir.actions.report">
+            <field name="name">Licences Report</field>
+            <field name="model">licences</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">certificates_licenses_expiry.report_licences</field>
+            <field name="report_file">certificates_licenses_expiry.report_licences</field>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

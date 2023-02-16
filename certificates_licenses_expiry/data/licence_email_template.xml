@@ -1,0 +1,122 @@
+<odoo>
+    <data>
+        <record id="email_template_licence" model="mail.template">
+            <field name="name">Licences Expiry Mail</field>
+            <field name="model_id" ref="model_licences"/>
+            <field name="subject">Licence Expiry</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        <strong>Hello,
+                            <br/>
+                        </strong>
+                        <strong>
+                            <span t-esc="object.customer_id.name"/>
+                            Your Licence Is Expired
+                        </strong>
+                    </p>
+                </div>
+                <br/>
+                <table width="100%" style="color: #454748; font-size: 12px; border-collapse: collapse;">
+                    <tr style="border-bottom: 1px solid #636363;">
+                        <td style="width: 150px;">
+                            <h2>
+                                <t t-esc="object.licence_number"/>
+                            </h2>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #636363;">
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>Licence</strong>
+                        </td>
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>
+                                <t t-esc="object.name"/>
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #636363;">
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>Start Date</strong>
+                        </td>
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>
+                                <t t-esc="object.start_date"/>
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #636363;">
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>Expire Date</strong>
+                        </td>
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>
+                                <t t-esc="object.expire_date"/>
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #636363;">
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>Licences Type</strong>
+                        </td>
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>
+                                <t t-esc="object.licences_types_id.licence_type"/>
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #636363;">
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>Issued by</strong>
+                        </td>
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>
+                                <t t-esc="object.issued_by_id.name"/>
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #636363;">
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>Project</strong>
+                        </td>
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>
+                                <t t-esc="object.project_id.name"/>
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #636363;">
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>Task</strong>
+                        </td>
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>
+                                <t t-esc="object.task_id.name"/>
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #636363;">
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>Product</strong>
+                        </td>
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>
+                                <t t-esc="object.product_id.name"/>
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #636363;">
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>Status</strong>
+                        </td>
+                        <td style="width: 150px;border-right: 1px solid #636363;border-left: 1px solid #636363;">
+                            <strong>
+                                <t t-esc="object.state"/>
+                            </strong>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+    </data>
+</odoo>

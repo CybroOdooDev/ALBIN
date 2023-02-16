@@ -1,0 +1,154 @@
+<odoo>
+    <data>
+        <template id="report_certificates">
+            <t t-call="web.external_layout">
+                <t t-call="web.html_container">
+
+                    <div class="page">
+                        <h1 style="color:black;align:center">Certificate Report</h1>
+
+                        <table class="table">
+                            <tr>
+                                <h2 style="color:black">
+                                    <t t-esc="record1"/>
+                                </h2>
+
+
+                            </tr>
+                        </table>
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <strong>Certificate Number</strong>
+                                </td>
+                                <td>
+                                    <t t-esc="record2"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Customer/Supplier/Contact</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record3"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Certificates Types</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record4"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Start Date</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record5"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Expired Date</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record6"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Issued By</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record7"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Project</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record8"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Task</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record9"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Product</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record16"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Responsible User</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record10"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Company</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record11"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Expire Remainder Day</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record15"/>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    <strong>Status</strong>
+                                </td>
+                                <td>
+                                    <t t-esc="record17"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Internal Notes</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record12"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Description</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record13"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Achievements</strong>
+                                </td>
+                                 <td>
+                                    <t t-esc="record14"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

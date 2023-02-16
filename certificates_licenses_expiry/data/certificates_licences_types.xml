@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="certificate_type_1" model="certificates.types">
+        <field name="certificate_type">Personal</field>
+    </record>
+    <record id="certificate_type_2" model="certificates.types">
+        <field name="certificate_type">Professional</field>
+    </record>
+    <record id="certificate_type_3" model="certificates.types">
+        <field name="certificate_type">Experience</field>
+    </record>
+    <record id="certificate_type_4" model="certificates.types">
+        <field name="certificate_type">Birth</field>
+    </record>
+    <record id="certificate_type_5" model="certificates.types">
+        <field name="certificate_type">Degree</field>
+    </record>
+    <record id="certificate_type_6" model="certificates.types">
+        <field name="certificate_type">Business</field>
+    </record>
+    <record id="licence_type_1" model="licences.types">
+        <field name="licence_type">Personal</field>
+    </record>
+    <record id="licence_type_2" model="licences.types">
+        <field name="licence_type">Professional</field>
+    </record>
+    <record id="licence_type_3" model="licences.types">
+        <field name="licence_type">Experience</field>
+    </record>
+    <record id="licence_type_4" model="licences.types">
+        <field name="licence_type">Birth</field>
+    </record>
+    <record id="licence_type_5" model="licences.types">
+        <field name="licence_type">Degree</field>
+    </record>
+    <record id="licence_type_6" model="licences.types">
+        <field name="licence_type">Business</field>
+    </record>
+</odoo>

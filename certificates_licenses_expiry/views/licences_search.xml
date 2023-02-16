@@ -1,0 +1,17 @@
+<odoo>
+    <template id="website_portal_search_licences"
+              inherit_id="portal.portal_searchbar">
+        <xpath expr="//div[@id='o_portal_navbar_content']" position="after">
+            <div t-if="licences" style="margin-left: auto;" class="search_group_by_licences">
+                <select id="group_select_licences" class="btn btn-secondary">
+                    <option value="0" style="color:gray;">Group By</option>
+                    <option value="1">Type</option>
+                    <option value="2">Tags</option>
+                </select>
+                <input type="text" placeholder="Enter Licence Number" id="licences_search_box">
+                </input>
+                <button type="button" class="btn btn-secondary" id="search_licences">Search</button>
+            </div>
+        </xpath>
+    </template>
+</odoo>

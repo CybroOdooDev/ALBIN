@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <record id="certificate_expiry_action" model="ir.cron">
+            <field name="name">Certificate Expiry</field>
+            <field name="model_id" ref="model_certificates"/>
+            <field name="state">code</field>
+            <field name="code">model.certificate_expiry_action()</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+        </record>
+        <record id="licence_expiry_action" model="ir.cron">
+            <field name="name">Licence Expiry</field>
+            <field name="model_id" ref="model_licences"/>
+            <field name="state">code</field>
+            <field name="code">model.licence_expiry_action()</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+        </record>
+    </data>
+</odoo>

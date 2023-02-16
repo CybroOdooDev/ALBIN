@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="certificates_main_menu"
+                  name="Certificates And Licences"
+                  sequence="1"/>
+
+        <record id="test_model_action_1" model="ir.actions.act_window">
+            <field name="name">Certificates</field>
+            <field name="res_model">certificates</field>
+            <field name="view_mode">tree,form,kanban,calendar,graph</field>
+            <field name="context">{'search_default_my_certificates': 0}</field>
+        </record>
+        <menuitem id="certificates_sub1_menu"
+                  name="Certificates And Licences"
+                  parent="certificates_main_menu"
+                  groups="certificates_licenses_expiry.certificates_licenses_expiry_manager_access"
+                  action="test_model_action_1"
+                  sequence="2"/>
+        <menuitem id="certificates_sub11_menu"
+                  name="Certificates"
+                  parent="certificates_sub1_menu"
+                  action="test_model_action_1"
+                  sequence="1"/>
+        <record id="test_model_action_licences" model="ir.actions.act_window">
+            <field name="name">Licences</field>
+            <field name="res_model">licences</field>
+            <field name="view_mode">tree,form,kanban,calendar,graph</field>
+            <field name="context">{'search_default_my_licences': 0}</field>
+        </record>
+        <menuitem id="certificates_sub1_menu_licences"
+                  name="Licences"
+                  parent="certificates_sub1_menu"
+                  action="test_model_action_licences"
+                  sequence="2"/>
+
+        <record id="test_model_action" model="ir.actions.act_window">
+            <field name="name">My Certificates</field>
+            <field name="res_model">certificates</field>
+            <field name="view_mode">tree,form,kanban,calendar,graph</field>
+            <field name="context">{'search_default_my_certificates': 1}</field>
+        </record>
+        <menuitem id="certificates_sub_menu"
+                  name="My Certificates And Licences"
+                  parent="certificates_main_menu"
+                  action="test_model_action"
+                  sequence="1"/>
+        <menuitem id="certificates_sub12_menu"
+                  name="My Certificates"
+                  parent="certificates_sub_menu"
+                  action="test_model_action"
+                  sequence="1"/>
+
+        <record id="test_model_action_my_licences" model="ir.actions.act_window">
+            <field name="name">My Licences</field>
+            <field name="res_model">licences</field>
+            <field name="view_mode">tree,form,kanban,calendar,graph</field>
+            <field name="context">{'search_default_my_licences': 1}</field>
+        </record>
+        <menuitem id="certificates_sub1_menu_my_licences"
+                  name="My Licences"
+                  parent="certificates_sub_menu"
+                  action="test_model_action_my_licences"
+                  sequence="2"/>
+
+
+        <record id="test_model_action_configuration" model="ir.actions.act_window">
+            <field name="name">Certificates Types</field>
+            <field name="res_model">certificates.types</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="certificates_sub2_menu"
+                  name="Configuration"
+                  groups="certificates_licenses_expiry.certificates_licenses_expiry_manager_access"
+                  parent="certificates_main_menu"
+                  action="test_model_action_configuration"
+                  sequence="3"/>
+        <menuitem id="menu_types" name="Types"
+                  parent="certificates_sub2_menu" sequence="5"/>
+        <menuitem id="conf_sub_menu"
+                  name="Certificate"
+                  parent="menu_types"
+                  action="test_model_action_configuration"
+                  sequence="3"/>
+
+        <record id="test_model_action_configuration_licences" model="ir.actions.act_window">
+            <field name="name">Licence Types</field>
+            <field name="res_model">licences.types</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="certificates_sub2_menu_licence"
+                  name="Licence"
+                  parent="menu_types"
+                  action="test_model_action_configuration_licences"
+                  sequence="2"/>
+        <menuitem id="menu_tags" name="Tags"
+                  parent="certificates_sub2_menu" sequence="6"/>
+
+        <record id="test_model_action_licences_tags" model="ir.actions.act_window">
+            <field name="name">Licence Tags</field>
+            <field name="res_model">licences.tags</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="certificates_sub_menu_licence_tags"
+                  name="Licence"
+                  parent="menu_tags"
+                  action="test_model_action_licences_tags"
+                  sequence="4"/>
+        <record id="test_model_action_certificates_tags" model="ir.actions.act_window">
+            <field name="name">Certificates Tags</field>
+            <field name="res_model">certificates.tags</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="certificates_sub_menu_certificates_tags"
+                  name="Certificates"
+                  parent="menu_tags"
+                  action="test_model_action_certificates_tags"
+                  sequence="5"/>
+
+        <record model="ir.actions.server" id="action_create_certificate_pdf_report">
+            <field name="name">PDF Report</field>
+            <field name="model_id" ref="certificates_licenses_expiry.model_certificates"/>
+            <field name="binding_model_id" ref="certificates_licenses_expiry.model_certificates"/>
+            <field name="binding_view_types">form</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.action_create_certificate_pdf_report()
+            </field>
+        </record>
+        <record model="ir.actions.server" id="action_create_licence_pdf_report">
+            <field name="name">PDF Report</field>
+            <field name="model_id" ref="certificates_licenses_expiry.model_licences"/>
+            <field name="binding_model_id" ref="certificates_licenses_expiry.model_licences"/>
+            <field name="binding_view_types">form</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.action_create_licence_pdf_report()
+            </field>
+        </record>
+    </data>
+</odoo>
